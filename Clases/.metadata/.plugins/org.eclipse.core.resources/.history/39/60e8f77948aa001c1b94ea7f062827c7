@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : Clase.c
+ Author      : Agustín
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+// Ingreso un numero n de numeros y hallo el promedio
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf (stdout,NULL);
+
+	int nroIngresado;
+	int sumaTotal = 0;
+	char respuesta;
+	int cantidadNumeros;
+	int promedio;
+
+	do
+	{
+		printf ("Ingrese un número: \n ");
+		scanf ("%d", &nroIngresado);
+
+		printf ("¿Quiere seguir ingresando números? \n ");
+		scanf ("%c", &respuesta);
+
+		cantidadNumeros++;
+	}
+	while (respuesta != 's');
+
+	promedio = sumaTotal / cantidadNumeros;
+
+	printf ("Hay un promedio de numeros de: %d",promedio);
+
+	return EXIT_SUCCESS;
+}
