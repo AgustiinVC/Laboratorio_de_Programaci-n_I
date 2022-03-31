@@ -1,5 +1,1 @@
-22:34:43 **** Incremental Build of configuration Debug for project Clase 1 Ejercicio 3 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 1 Ejercicio 3.o" "..\\src\\Clase 1 Ejercicio 3.c" 
-gcc -o "Clase 1 Ejercicio 3.exe" "src\\Clase 1 Ejercicio 3.o" 
-Info: Nothing to build for Clase 1 Ejercicio 3
+Info: Nothing to build for Clase 2 Ejercicio 2 - Funciones
