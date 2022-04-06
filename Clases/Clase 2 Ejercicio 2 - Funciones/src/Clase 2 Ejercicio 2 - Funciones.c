@@ -28,9 +28,9 @@ int main(void) {
 	setbuf (stdout, NULL);
 	int numUno;
 	int numDos;
-	int resultadoFuncion;
+	int suma;
 	int multiplicar;
-	float rtadivision;
+	float division;
 	int resta;
 
 	printf ("Ingrese el primer número: ");
@@ -41,15 +41,16 @@ int main(void) {
 	fflush(stdin);
 	scanf ("%d", &numDos);
 
-	resultadoFuncion = sumaNro (numUno, numDos);
+	suma = sumaNro (numUno, numDos);
 	multiplicar = multiplicaNro (numUno, numDos);
 	resta = restaNro (numUno, numDos);
 
-	printf ("La suma es: %d \n",resultadoFuncion);
+	printf ("\nLa suma es: %d \n",suma);
 	printf ("La multiplicación es: %d \n", multiplicar);
-	if (divisionNro (numUno, numDos, &rtadivision))
+
+	if (divisionNro (numUno, numDos, &division))
 	{
-		printf ("La division es: %f \n", rtadivision);
+		printf ("La division es: %f \n", division);
 	}
 	else
 	{
