@@ -116,6 +116,9 @@ int opcionCaracter (char *mensaje)
 				case 'E':
 					retorno = 5;
 					break;
+				case 'F':
+					retorno = 6;
+					break;
 				case '0':
 					retorno = 0;
 					break;
@@ -1205,6 +1208,7 @@ void menuAdmin (void)
 	puts ("B) LISTAR TODOS LOS PRODUCTOS POR CATEGORIA");
 	puts ("C) BAJA DE UN PRODUCTO");
 	puts ("D) BAJA DE UN USUARIO");
-	puts ("E) VER TRACKING GLOBAL\n");
+	puts ("E) VER TRACKING GLOBAL");
+	puts ("F) FILTRAR POR NOMBRE DE PRODUCTO\n");
 	puts ("0) SALIR");
 }

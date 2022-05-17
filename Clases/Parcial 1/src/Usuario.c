@@ -123,6 +123,10 @@ int usu_altaArray(Usuario* list , int len)
 				}
 				else
 				{
+					if (list[indiceCorreo].isAdmin == 1)
+					{
+						puts ("USTED ES UN ADMIN, DEBERIA SABER SU CONTRASEÑA!!!");
+					}
 					//si el usuario se dio de baja si puede darse de alta
 					puts ("USUARIO YA REGISTRADO");
 					if (list[indiceCorreo].isEmpty == USU_BAJA && validacionDosCaracteres ("¿Desea darse de alta otra vez?", 'S', 'N') == 1)

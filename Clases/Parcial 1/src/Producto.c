@@ -119,9 +119,9 @@ int pro_imprimir(Producto* list, int length)
 				if (flagPrimerProducto == 0)
 				{
 					flagPrimerProducto = 1;
-					puts("\n\t\t> LISTADO PRODUCTOS\n"
-							"-----------------------------------------------------------------------");
-					printf("%-6s %-27s %-13s %-15s %-6s\n", "ID", "NOMBRE", "PRECIO", "CATEGORIA", "STOCK");
+					puts("\n\t\t\t\t\t> LISTADO PRODUCTOS\n"
+							"-----------------------------------------------------------------------------");
+					printf("%-6s %-27s %-11s %-13s %-15s %-6s\n", "ID", "NOMBRE", "ID VENDEDOR" ,"PRECIO", "CATEGORIA", "STOCK");
 				}
 
 				pro_printOne (&list[i]);
@@ -139,8 +139,8 @@ int pro_imprimir(Producto* list, int length)
 /// @param list es el Producto que se va a imprimir
 void pro_printOne (Producto* list)
 {
-	printf ("%-6d %-27s %-13.2f %-15s %-6d\n",
-		list->idProducto, list->nombreProducto, list->precio, CATEGORIAS_PRODUCTOS [(list->categoria)-1], list->stock);
+	printf ("%-6d %-27s %-11d %-13.2f %-15s %-6d\n",
+		list->idProducto, list->nombreProducto, list->FK_idVendedor , list->precio, CATEGORIAS_PRODUCTOS [(list->categoria)-1], list->stock);
 }
 
 /// @fn int pro_imprimirMismoVendedor(Producto*, int, int)
@@ -166,7 +166,7 @@ int pro_imprimirMismoVendedor(Producto* list, int length, int userId)
 					flagPrimerProducto = 1;
 					puts("\n\t\t\t\t\t> LISTADO PRODUCTOS\n"
 							"-----------------------------------------------------------------------------");
-					printf("%-6s %-27s %-13s %-15s %-6s\n", "ID", "NOMBRE", "PRECIO", "CATEGORIA", "STOCK");
+					printf("%-6s %-27s %-11s %-13s %-15s %-6s\n", "ID", "NOMBRE", "ID VENDEDOR" ,"PRECIO", "CATEGORIA", "STOCK");
 				}
 
 				pro_printOne (&list[i]);
@@ -303,7 +303,7 @@ int pro_Baja (Producto* list, int len)
 	int idIngresado;
 	int index;
 	int flagAlta = 0;
-	if (pro_imprimir(list, len) == 0)
+	if (pro_sortsByID(list,len) == 0 && pro_imprimir(list, len) == 0)
 	{
 		flagAlta = 1;
 	}
@@ -327,6 +327,143 @@ int pro_Baja (Producto* list, int len)
 				}
 			}
 		}
+	}
+	return rtn;
+}
+
+/// @fn int pro_reponerStock(Producto*, int)
+/// funcion para reponer stock
+/// @param list de producto
+/// @param len maxima cantidad de productos
+/// @return devuelve un 0 si esta ok o -1 si hay error
+int pro_reponerStock (Producto* list, int len)
+{
+	int rtn = -1;
+	int idIngresado;
+	int stockReponer = 0;
+	int index;
+
+	if (list != NULL && len > 0)
+	{
+		if( utn_getIntAlone (&idIngresado ,"\nIngrese un ID: ", "Error. Ingrese un numero.\n") == 0)
+		{
+			while (pro_findById(list, len, idIngresado) == -1)
+			{
+				puts("NO EXISTE ID.");
+				utn_getIntAlone (&idIngresado ,"\nIngrese un ID: ", "Error. Ingrese un numero.\n");
+			}
+
+			index = pro_findById(list, len, idIngresado);
+			utn_getIntPositivo(&stockReponer, "Ingrese la cantidad a reponer: ", "Ingrese un numero valido.");
+			if (validacionDosCaracteres ("¿Esta seguro de querer reponer el producto? (S/N)", 'S', 'N') == 1)
+			{
+				list[index].stock += stockReponer;
+				puts ("Stock añadido.");
+			}
+		}
+		rtn = 0;
+	}
+	return rtn;
+}
+
+/// @fn int pro_buscarImprimirNombre(Producto*, int)
+/// funcion para buscar todos los productos con el mismo nombre y ordenarlos por stock
+/// @param list el array de estructuras de productos
+/// @param len la cantidad maxima de productos
+/// @return devuelve un 0 si esta Ok
+int pro_buscarImprimirNombre(Producto* list, int len)
+{
+	int rtn = -1;
+	char nombre[NOMBRE_LEN];
+	int primer = 0;
+
+	if (list != NULL && len > 0)
+	{
+		if (utn_getNombre(nombre, "Ingrese el nombre del producto: ", "Ingrese un nombre valido", NOMBRE_LEN, 3) == 0)
+		{
+			for (int i = 0; i < len; i++)
+			{
+				if (compararCadenas(nombre, list[i].nombreProducto, NOMBRE_LEN) == 3)
+				{
+					if (primer == 0)
+					{
+						primer++;
+						puts("\n\t\t\t\t\t> LISTADO PRODUCTOS\n"
+								"-----------------------------------------------------------------------------");
+						printf("%-6s %-27s %-11s %-13s %-15s %-6s\n", "ID", "NOMBRE", "ID VENDEDOR" ,"PRECIO", "CATEGORIA", "STOCK");
+					}
+					pro_printOne(&list[i]);
+				}
+			}
+			if (primer == 0)
+			{
+				puts ("No se encontro el producto a buscar");
+			}
+		}
+		rtn = 0;
+	}
+	return rtn;
+}
+
+/// @fn int pro_sortsByStock(Producto*, int)
+/// funcion para ordenar por stock
+/// @param list el array de estructuras de productos
+/// @param len la cantidad maxima de productos
+/// @return devuelve un 0 si esta Ok
+int pro_sortsByStock(Producto* list, int len)
+{
+	int rtn = -1;
+	int i;
+	int j;
+	Producto auxProducto;
+
+	if (list != NULL && len > 0)
+	{
+				for (i = 1; i < len; i++)
+				{
+					auxProducto = list[i];
+					j = i - 1;
+					while ( (j >= 0) && (auxProducto.stock < list[j].stock) )
+					{
+						list[j + 1] = list[j];
+						j--;
+					}
+					list[j + 1] = auxProducto;
+				}
+
+				rtn = 0;
+	}
+	return rtn;
+}
+
+
+/// @fn int pro_sortsByID(Producto*, int)
+/// funcion para ordenar por ID del producto
+/// @param list el array de estructuras de productos
+/// @param len la cantidad maxima de productos
+/// @return devuelve un 0 si esta Ok
+int pro_sortsByID(Producto* list, int len)
+{
+	int rtn = -1;
+	int i;
+	int j;
+	Producto auxProducto;
+
+	if (list != NULL && len > 0)
+	{
+				for (i = 1; i < len; i++)
+				{
+					auxProducto = list[i];
+					j = i - 1;
+					while ( (j >= 0) && (auxProducto.idProducto < list[j].idProducto) )
+					{
+						list[j + 1] = list[j];
+						j--;
+					}
+					list[j + 1] = auxProducto;
+				}
+
+				rtn = 0;
 	}
 	return rtn;
 }

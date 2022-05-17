@@ -2385,3 +2385,146 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Usuario.o" "..\\src\\Usuario.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
 gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+18:58:50 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'pro_reponerStock':
+..\src\Producto.c:352:23: warning: passing argument 1 of 'utn_getIntPositivo' makes pointer from integer without a cast [-Wint-conversion]
+    utn_getIntPositivo(stockReponer, "Ingrese la cantidad a reponer: ", "Ingrese un numero valido.");
+                       ^~~~~~~~~~~~
+In file included from ..\src\Producto.c:8:0:
+..\src\validaciones.h:34:5: note: expected 'int *' but argument is of type 'int'
+ int utn_getIntPositivo (int* pNumeroIngresado, char* mensaje, char* mensajeError);
+     ^~~~~~~~~~~~~~~~~~
+..\src\Producto.c:352:4: warning: 'stockReponer' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    utn_getIntPositivo(stockReponer, "Ingrese la cantidad a reponer: ", "Ingrese un numero valido.");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+..\src\Producto_Usuario_Tracking.c: In function 'union_usuario':
+..\src\Producto_Usuario_Tracking.c:69:13: error: 'opcionInternan' undeclared (first use in this function)
+      switch(opcionInternan)
+             ^~~~~~~~~~~~~~
+..\src\Producto_Usuario_Tracking.c:69:13: note: each undeclared identifier is reported only once for each function it appears in
+..\src\Producto_Usuario_Tracking.c:83:73: warning: implicit declaration of function 'pro_reponerStock' [-Wimplicit-function-declaration]
+        if (pro_imprimirMismoVendedor(pro_list, pro_len, userId) == 0 && pro_reponerStock (pro_list, pro_len) == 0)
+                                                                         ^~~~~~~~~~~~~~~~
+18:59:01 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+..\src\Producto_Usuario_Tracking.c: In function 'union_usuario':
+..\src\Producto_Usuario_Tracking.c:83:73: warning: implicit declaration of function 'pro_reponerStock' [-Wimplicit-function-declaration]
+        if (pro_imprimirMismoVendedor(pro_list, pro_len, userId) == 0 && pro_reponerStock (pro_list, pro_len) == 0)
+                                                                         ^~~~~~~~~~~~~~~~
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+18:59:57 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'pro_reponerStock':
+..\src\Producto.c:357:23: warning: passing argument 1 of 'utn_getIntPositivo' makes pointer from integer without a cast [-Wint-conversion]
+    utn_getIntPositivo(stockReponer, "Ingrese la cantidad a reponer: ", "Ingrese un numero valido.");
+                       ^~~~~~~~~~~~
+In file included from ..\src\Producto.c:8:0:
+..\src\validaciones.h:34:5: note: expected 'int *' but argument is of type 'int'
+ int utn_getIntPositivo (int* pNumeroIngresado, char* mensaje, char* mensajeError);
+     ^~~~~~~~~~~~~~~~~~
+..\src\Producto.c:357:4: warning: 'stockReponer' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    utn_getIntPositivo(stockReponer, "Ingrese la cantidad a reponer: ", "Ingrese un numero valido.");
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 1.o" "..\\src\\Parcial 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:00:20 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'pro_reponerStock':
+..\src\Producto.c:357:23: warning: passing argument 1 of 'utn_getIntPositivo' makes pointer from integer without a cast [-Wint-conversion]
+    utn_getIntPositivo(stockReponer, "Ingrese la cantidad a reponer: ", "Ingrese un numero valido.");
+                       ^~~~~~~~~~~~
+In file included from ..\src\Producto.c:8:0:
+..\src\validaciones.h:34:5: note: expected 'int *' but argument is of type 'int'
+ int utn_getIntPositivo (int* pNumeroIngresado, char* mensaje, char* mensajeError);
+     ^~~~~~~~~~~~~~~~~~
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:00:31 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 1
+19:09:06 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+..\src\Producto_Usuario_Tracking.c: In function 'union_admin':
+..\src\Producto_Usuario_Tracking.c:215:10: warning: implicit declaration of function 'pro_buscarImprimirNombre' [-Wimplicit-function-declaration]
+      if (pro_buscarImprimirNombre(pro_list, pro_len) == 0)
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:09:25 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 1.o" "..\\src\\Parcial 1.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:09:34 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 1
+19:15:26 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 1.o" "..\\src\\Parcial 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+..\src\Producto_Usuario_Tracking.c: In function 'union_admin':
+..\src\Producto_Usuario_Tracking.c:219:10: warning: implicit declaration of function 'pro_orderByStock' [-Wimplicit-function-declaration]
+      if (pro_orderByStock (pro_list, pro_len) == 0 && pro_buscarImprimirNombre(pro_list, pro_len) == 0)
+          ^~~~~~~~~~~~~~~~
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+src\Producto_Usuario_Tracking.o: In function `union_admin':
+D:\Users\Agostin\Desktop\Facultad\2022\Laboratorio De Programación\Laboratorio_de_Programacion_I\Clases\Parcial 1\Debug/../src/Producto_Usuario_Tracking.c:219: undefined reference to `pro_orderByStock'
+collect2.exe: error: ld returned 1 exit status
+19:15:42 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 1
+19:29:29 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 1.o" "..\\src\\Parcial 1.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+src\Producto_Usuario_Tracking.o: In function `union_admin':
+D:\Users\Agostin\Desktop\Facultad\2022\Laboratorio De Programación\Laboratorio_de_Programacion_I\Clases\Parcial 1\Debug/../src/Producto_Usuario_Tracking.c:219: undefined reference to `pro_sortsByStock'
+collect2.exe: error: ld returned 1 exit status
+19:30:59 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:31:43 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 1
+19:34:01 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto_Usuario_Tracking.o" "..\\src\\Producto_Usuario_Tracking.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:48:26 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Usuario.o" "..\\src\\Usuario.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+..\src\Producto.c: In function 'pro_printOne':
+..\src\Producto.c:142:26: warning: format '%s' expects argument of type 'char *', but argument 4 has type 'int' [-Wformat=]
+  printf ("%-6d %-27s %-11s %-13.2f %-15s %-6d\n",
+                          ^
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+19:48:41 **** Incremental Build of configuration Debug for project Parcial 1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Producto.o" "..\\src\\Producto.c" 
+gcc -o "Parcial 1.exe" "src\\Parcial 1.o" "src\\Producto.o" "src\\Producto_Usuario_Tracking.o" "src\\Tracking.o" "src\\Usuario.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 1
+Info: Nothing to build for Parcial 1

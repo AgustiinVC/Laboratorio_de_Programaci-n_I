@@ -39,6 +39,7 @@ int union_usuario (Usuario* usu_list, int usu_len, Producto* pro_list, int pro_l
 {
 	int rtn = -1;
 	int opcion;
+	int opcionInterna;
 	if (usu_list != NULL && usu_len > 0 && pro_list != NULL && pro_len > 0 && tra_list != NULL && tra_len > 0)
 	{
 		 do
@@ -61,16 +62,35 @@ int union_usuario (Usuario* usu_list, int usu_len, Producto* pro_list, int pro_l
 					}
 					break;
 
-				case 2: //Vender es un alta de producto
+				case 2: //Vender es un alta de producto y reponer stock
+					utn_getIntRange(&opcionInterna, "Desea: 1 - Realizar ALTA de PRODUCTO\n"
+															 "       2 - Reponer Stock\n"
+															"Ingrese su opcion: ", "Ingrese un numero valido.\n", 1, 2);
+					switch(opcionInterna)
+					{
+						case 1:
+							if(pro_altaArray(usu_list, usu_len, pro_list , pro_len, userId) == 0)
+							{
+								puts("Alta de producto realizada.");
+							}
+							else
+							{
+								puts ("Error en el alta del producto.");
+							}
+							break;
 
-					if(pro_altaArray(usu_list, usu_len, pro_list , pro_len, userId) == 0)
-					{
-						puts("Alta de producto realizada.");
+						case 2:
+							if (pro_imprimirMismoVendedor(pro_list, pro_len, userId) == 0 && pro_reponerStock (pro_list, pro_len) == 0)
+							{
+								puts ("");
+							}
+							else
+							{
+								puts ("No se repuso stock.");
+							}
+							break;
 					}
-					else
-					{
-						puts ("Error en el alta del producto.");
-					}
+
 					break;
 
 				case 3: // Estado de Compras
@@ -188,6 +208,17 @@ int union_admin(Usuario* usu_list, int usu_len, Producto* pro_list, int pro_len,
 					if (actualizarEstado (tra_list, tra_len, userId) == 0 && tra_imprimir(tra_list, tra_len) == 0)
 					{
 						puts ("Lista de tracking global mostrada.");
+					}
+					else
+					{
+						puts ("No se pudo mostrar el listado.");
+					}
+					break;
+
+				case 6: //Filtrar por Nombre de Producto Y orden por stock
+					if (pro_sortsByStock (pro_list, pro_len) == 0 && pro_buscarImprimirNombre(pro_list, pro_len) == 0)
+					{
+						puts (" ");
 					}
 					else
 					{
@@ -412,12 +443,12 @@ int union_estadoCompras (Tracking* tra_list, int tra_len, Producto* pro_list, in
 }
 
 /// @fn int union_imprimir(Tracking*, int, Producto*, int, int)
-/// @brief imprimir
+/// @brief imprimir lista de tracking
 /// @param tra_list es el array de estructuras de Tracking
 /// @param tra_len es la cantidad maxima de Tracking
 /// @param pro_list es el array de estructuras de Productos
 /// @param pro_len es la cantidad maxima de Productos
-/// @param userId
+/// @param userId el usuario que se loguea
 /// @return devuelve un 0 si esta OK o un -1 si hay error
 int union_imprimir(Tracking* tra_list, int tra_len, Producto* pro_list, int pro_len, int userId)
 {
@@ -451,6 +482,14 @@ int union_imprimir(Tracking* tra_list, int tra_len, Producto* pro_list, int pro_
 	return rtn;
 }
 
+/// @fn int union_imprimirENVIAJE(Tracking*, int, Producto*, int, int)
+/// @brief imprimir lista de tracking en viaje
+/// @param tra_list es el array de estructuras de Tracking
+/// @param tra_len es la cantidad maxima de Tracking
+/// @param pro_list es el array de estructuras de Productos
+/// @param pro_len es la cantidad maxima de Productos
+/// @param userId el usuario que se loguea
+/// @return devuelve un 0 si esta OK o un -1 si hay error
 int union_imprimirENVIAJE(Tracking* tra_list, int tra_len, Producto* pro_list, int pro_len, int userId)
 {
 	int rtn = -1;
@@ -498,6 +537,15 @@ void union_printOne (Tracking* list, Producto* auxProducto)
 }
 
 // VENTAS
+
+/// @fn int union_estadoVentas(Tracking*, int, Producto*, int, int)
+/// @brief el estado de ventas del usuario
+/// @param tra_list es el array de estructuras de Tracking
+/// @param tra_len es la cantidad maxima de Tracking
+/// @param pro_list es el array de estructuras de Productos
+/// @param pro_len es la cantidad maxima de Productos
+/// @param userId el usuario que se loguea
+/// @return devuelve un 0 si esta OK o un -1 si hay error
 int union_estadoVentas (Tracking* tra_list, int tra_len, Producto* pro_list, int pro_len, int userId)
 {
 	int rtn = -1;
@@ -543,6 +591,15 @@ int union_estadoVentas (Tracking* tra_list, int tra_len, Producto* pro_list, int
 	return rtn;
 }
 
+
+/// @fn int tra_imprimirVentas(Tracking*, int, Producto*, int, int)
+/// @brief imprimir lista de tracking que estan ENTREGADAS o CANCELADAS si es que tiene productos en venta
+/// @param tra_list es el array de estructuras de Tracking
+/// @param tra_len es la cantidad maxima de Tracking
+/// @param pro_list es el array de estructuras de Productos
+/// @param pro_len es la cantidad maxima de Productos
+/// @param userId el usuario que se loguea
+/// @return devuelve un 0 si esta OK o un -1 si hay error
 int tra_imprimirVentas(Tracking* tra_list, int tra_len, Producto* pro_list, int pro_len, int userId)
 {
 	int rtn = -1;

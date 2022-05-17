@@ -44,5 +44,8 @@ int pro_findById(Producto* list, int len,int id);
 
 int pro_remover(Producto* list, int len, int id);
 int pro_Baja (Producto* list, int len);
-
+int pro_reponerStock (Producto* list, int len);
+int pro_buscarImprimirNombre(Producto* list, int len);
+int pro_sortsByStock(Producto* list, int len);
+int pro_sortsByID(Producto* list, int len);
 #endif /* PRODUCTO_H_ */
