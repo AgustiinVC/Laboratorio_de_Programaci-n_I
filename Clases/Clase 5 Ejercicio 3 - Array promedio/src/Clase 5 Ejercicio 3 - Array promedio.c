@@ -40,10 +40,6 @@ int main(void)
 	int cantMax = 0;
 	int cantMin = 0;
 
-	//int cantMismoNro = 0;
-	//int posicion;
-
-
 	for (i = 0; i < ARRAY_MAX; i++)
 	{
 		if (getIntAlone (&arrayNros[i], "Ingrese un numero: ", "Numero ingresado incorrecto"))
@@ -72,17 +68,19 @@ int main(void)
 				break;
 
 			case 3:
-				promedioArrayInt (arrayNros,ARRAY_MAX, &promedio);
+				promedioArrayInt (arrayNros, ARRAY_MAX, &promedio);
 				break;
 			case 4:
 				buscarNro(arrayNros, ARRAY_MAX);
 				break;
 			case 5:
 				puts ("Saliste del programa. Adios!");
+				break;
 
 			default:
 				puts ("Ingrese una opcion correcta.");
 		}
+		presionarEnter();
 
 		if (opcionIngresada != 5)
 		{
@@ -90,7 +88,6 @@ int main(void)
 			menu();
 			saltoDeLinea();
 		}
-
 	}
 	while (opcionIngresada != 5);
 	return EXIT_SUCCESS;

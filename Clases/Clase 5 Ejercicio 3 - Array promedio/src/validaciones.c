@@ -159,7 +159,7 @@ int getIntAlone (int* pNumeroIngresado, char* mensaje, char* mensajeError)
 			break;
 		}
 		fflush(stdin);
-		printf (mensajeError);
+		puts (mensajeError);
 	}
 	return rtn;
 }
@@ -272,7 +272,17 @@ int getDoubleAlone(double* pNumeroIngresado, char* mensaje, char* mensajeError)
 	return 0;
 }
 
+//------------------------------------------------------------------------------------------------------------
+//Mejoras de Visualizacion
+
 void saltoDeLinea (void)
 {
 	puts ("------------------------------");
+}
+
+void presionarEnter (void)
+{
+  printf ( "Presiona ENTER para continuar..." );
+  fflush (stdin);
+  getchar();
 }

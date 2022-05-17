@@ -97,23 +97,25 @@ void buscarNro(int* array, int len)
 	int contador = 0;
 	int nroIngresado;
 	int direcciones [len];
+	int posicion [len];
 
 	getIntAlone (&nroIngresado, "Ingrese un numero a comparar: ","Numero Ingresado incorrecto.");
 	for (i=0; i < len; i++)
 	{
 		if (nroIngresado == array[i])
 			{
-				direcciones [contador] = (int)&array[i];
+				direcciones [contador] = (int) &array[i];
+				posicion [contador] = i;
 				contador++;
 			}
 	}
 	printf ("\nSe ingreso el %d un total de %d veces.\n", nroIngresado, contador);
 	if (contador != 0)
 	{
-		printf ("En las siguientes direcciones: ");
+		printf ("En las siguientes direcciones: \n");
 		for ( i = 0 ; i < (contador) ; i++)
 		{
-			printf (" %d ",direcciones[i]);
+			printf ("	- Posicion en el array: %d Direccion: %d\n", posicion [i], direcciones[i]);
 		}
 		puts("");
 	}

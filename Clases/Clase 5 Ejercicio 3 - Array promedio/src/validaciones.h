@@ -32,5 +32,6 @@ int getDouble(double* pNumeroIngresado, char* mensaje, char* mensajeError, doubl
 int getDoubleAlone(double* pNumeroIngresado, char* mensaje, char* mensajeError);
 
 void saltoDeLinea (void);
+void presionarEnter (void);
 
 #endif /* VALIDACIONES_H_ */
