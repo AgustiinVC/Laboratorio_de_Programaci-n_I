@@ -195,15 +195,24 @@ int controller_informes (LinkedList* pArrayListSalon, LinkedList* pArrayListArca
 						puts ("Informe G no realizado.");
 					}
 					break;
-
 				case 'H':
+					if (controller_informeH(pArrayListSalon) == 0)
+					{
+
+					}
+					else
+					{
+						puts ("Informe H no realizado.");
+					}
+					break;
+				case 'I':
 					respuesta = 0;
 					break;
 				default:
 					puts ("Ingrese un caracter valido.");
 			}
 
-			if (opcion != 'H')
+			if (opcion != 'I')
 			{
 				respuesta = validacionDosCaracteres ("¿Desea ver otro informe? (S/N)", 'S', 'N');
 			}
@@ -734,6 +743,57 @@ int controller_informeG(LinkedList* pArrayListArcade, LinkedList* pArrayListJueg
 		ll_deleteLinkedList(cloneListArcade);
 		ll_deleteLinkedList(cloneListJuegos);
 		rtn = 0;
+	}
+    return rtn;
+}
+
+/// @fn int controller_informeA(LinkedList*)
+/// @brief Informe A con la lista de salones con mas de 4 arcade
+/// @param pArrayListSalon lista de salones
+/// @return un 0 si esta Ok y un -1 si hay error
+int controller_informeH(LinkedList* pArrayListSalon)
+{
+	int rtn = -1;
+	int i;
+	int lenSalones;
+	int opcion;
+	Salon* pAuxSalon;
+	LinkedList* filterSalones;
+	if (pArrayListSalon != NULL)
+	{
+		utn_getIntRange (&opcion ,"\nIngrese cual tipo de salon quiere filtrar:\n "
+												"1 - LOCAL\n "
+												"2 - SHOPPING\n "
+												"Ingrese su opcion: ",
+												"Error. Ingrese una opcion correcta\n\n", 1, 2);
+		lenSalones = ll_len(pArrayListSalon);
+		filterSalones = ll_newLinkedList();
+		if (lenSalones > 0 && lenSalones < MAX_SALONES)
+		{
+			puts("\n\t\t\t\t\t> LISTADO Salones Filtrados\n"
+				"--------------------------------------------------------------"
+				"--------------------------------------------------------------");
+			printf("%-6s %-50s %-50s %-12s ||\n", "ID", "NOMBRE", "DIRECCION", "TIPO SALON");
+			if (opcion == 1)
+			{
+				filterSalones = ll_filter(pArrayListSalon, Salon_filterLocal);
+			}
+			else
+			{
+				filterSalones = ll_filter(pArrayListSalon, Salon_filterShopping);
+			}
+
+			lenSalones = ll_len(filterSalones);
+			for (i = 0; i < lenSalones; i++)
+			{
+				pAuxSalon = (Salon*)ll_get(filterSalones, i);
+				if (Salon_print(pAuxSalon) == 0)
+				{
+					printf("\n");
+					rtn = 0;
+				}
+			}
+		}
 	}
     return rtn;
 }

@@ -14,3 +14,323 @@ Info: Nothing to build for Parcial 2 V2
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
 gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+18:39:59 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2 V2
+18:59:08 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:24:57 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeH':
+..\src\Controller.c:762:6: warning: unused variable 'cantArcades' [-Wunused-variable]
+  int cantArcades;
+      ^~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+..\src\Salones.c: In function 'Salon_filterByType':
+..\src\Salones.c:346:6: warning: unused variable 'resultado' [-Wunused-variable]
+  int resultado;
+      ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:25:21 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2 V2
+19:27:34 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:29:16 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:29:40 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:30:25 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:32:06 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:34:39 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:40:12 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:42:27 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:46:37 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:47:12 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\validaciones.o" "..\\src\\validaciones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:48:10 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:53:42 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeH':
+..\src\Controller.c:779:48: warning: passing argument 2 of 'll_filter' from incompatible pointer type [-Wincompatible-pointer-types]
+     filterSalones = ll_filter(pArrayListSalon, Salon_filterLocal,&opcion);
+                                                ^~~~~~~~~~~~~~~~~
+In file included from ..\src\ControllerSalon.h:13:0,
+                 from ..\src\ControllerJuego.h:20,
+                 from ..\src\ControllerArcade.h:18,
+                 from ..\src\Controller.h:19,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:57:13: note: expected 'int (*)(void *)' but argument is of type 'int (*)(void *, void *)'
+ LinkedList* ll_filter (LinkedList* this, int (*pFunc)(void*),void*filter);
+             ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+..\src\LinkedList.c: In function 'll_filter':
+..\src\LinkedList.c:597:9: error: too many arguments to function 'pFunc'
+     if (pFunc(pAuxElement, filter) == 0)
+         ^~~~~
+19:54:13 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+In file included from ..\src\Juegos.h:14:0,
+                 from ..\src\Juegos.c:9:
+..\src\LinkedList.h:57:48: error: 'pFunc' declared as function returning a function
+ LinkedList* ll_filter (LinkedList* this, int (*pFunc)(void*)(void*),void*filter);
+                                                ^~~~~
+19:54:40 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+..\src\Salones.c: In function 'Salon_filterLocal':
+..\src\Salones.c:326:35: warning: comparison between pointer and integer
+  if ( ((Salon*)this) -> tipoSalon == filter)
+                                   ^~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeH':
+..\src\Controller.c:783:48: warning: passing argument 2 of 'll_filter' from incompatible pointer type [-Wincompatible-pointer-types]
+     filterSalones = ll_filter(pArrayListSalon, Salon_filterShopping,&opcion);
+                                                ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ControllerSalon.h:13:0,
+                 from ..\src\ControllerJuego.h:20,
+                 from ..\src\ControllerArcade.h:18,
+                 from ..\src\Controller.h:19,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:57:13: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(void *)'
+ LinkedList* ll_filter (LinkedList* this, int (*pFunc)(void*,void*),void*filter);
+             ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:55:38 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeH':
+..\src\Controller.c:783:48: warning: passing argument 2 of 'll_filter' from incompatible pointer type [-Wincompatible-pointer-types]
+     filterSalones = ll_filter(pArrayListSalon, Salon_filterShopping,&opcion);
+                                                ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ControllerSalon.h:13:0,
+                 from ..\src\ControllerJuego.h:20,
+                 from ..\src\ControllerArcade.h:18,
+                 from ..\src\Controller.h:19,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:57:13: note: expected 'int (*)(void *, void *)' but argument is of type 'int (*)(void *)'
+ LinkedList* ll_filter (LinkedList* this, int (*pFunc)(void*,void*),void* filter);
+             ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+..\src\Salones.c: In function 'Salon_filterLocal':
+..\src\Salones.c:326:35: warning: comparison between pointer and integer
+  if ( ((Salon*)this) -> tipoSalon == filter)
+                                   ^~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:56:02 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+..\src\Salones.c: In function 'Salon_filterLocal':
+..\src\Salones.c:326:35: warning: comparison between pointer and integer
+  if ( ((Salon*)this) -> tipoSalon == &filter)
+                                   ^~
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+19:56:48 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2 V2
+19:58:05 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeH':
+..\src\Controller.c:779:48: warning: passing argument 2 of 'll_filter' from incompatible pointer type [-Wincompatible-pointer-types]
+     filterSalones = ll_filter(pArrayListSalon, Salon_filterLocal);
+                                                ^~~~~~~~~~~~~~~~~
+In file included from ..\src\ControllerSalon.h:13:0,
+                 from ..\src\ControllerJuego.h:20,
+                 from ..\src\ControllerArcade.h:18,
+                 from ..\src\Controller.h:19,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:57:13: note: expected 'int (*)(void *)' but argument is of type 'int (*)(void *, void *)'
+ LinkedList* ll_filter (LinkedList* this, int (*pFunc)(void*));
+             ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+..\src\Salones.c:323:5: error: conflicting types for 'Salon_filterLocal'
+ int Salon_filterLocal (void* this)
+     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Salones.c:7:0:
+..\src\Salones.h:59:5: note: previous declaration of 'Salon_filterLocal' was here
+ int Salon_filterLocal (void* this, void* filter);
+     ^~~~~~~~~~~~~~~~~
+19:58:44 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2 V2
+Info: Nothing to build for Parcial 2 V2
+20:07:01 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2 V2.o" "..\\src\\Parcial 2 V2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerSalon.o" "..\\src\\ControllerSalon.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+..\src\Salones.c:323:5: error: conflicting types for 'Salon_filterLocal'
+ int Salon_filterLocal (void* this, void* filter)
+     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Salones.c:7:0:
+..\src\Salones.h:59:5: note: previous declaration of 'Salon_filterLocal' was here
+ int Salon_filterLocal (void* this);
+     ^~~~~~~~~~~~~~~~~
+20:07:19 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerJuego.o" "..\\src\\ControllerJuego.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Parcial 2 V2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:07:25 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2 V2
+Info: Nothing to build for Parcial 2 V2
+20:13:32 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+20:20:28 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+..\src\ControllerArcade.c: In function 'controllerArcade_removeArcade':
+..\src\ControllerArcade.c:302:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'int'
+  int indiceSalon;
+  ^~~
+..\src\ControllerArcade.c:316:37: error: 'auxIdSalon' undeclared (first use in this function)
+   Arcade_getFK_IdSalon(pAuxArcade, &auxIdSalon);
+                                     ^~~~~~~~~~
+..\src\ControllerArcade.c:316:37: note: each undeclared identifier is reported only once for each function it appears in
+20:20:35 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2 V2
+20:22:56 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+20:23:16 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+..\src\ControllerArcade.c: In function 'controllerArcade_removeArcade':
+..\src\ControllerArcade.c:326:44: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+   printf("%-6s %-50s %-12s %-12s %-12s %-10s %-10s\n", "ID", "NACIONALIDAD", "TIPO SONIDO", "CANT JUG", "CANT FICHAS");
+                                            ^
+..\src\ControllerArcade.c:326:50: warning: format '%s' expects a matching 'char *' argument [-Wformat=]
+   printf("%-6s %-50s %-12s %-12s %-12s %-10s %-10s\n", "ID", "NACIONALIDAD", "TIPO SONIDO", "CANT JUG", "CANT FICHAS");
+                                                  ^
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+20:23:25 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+20:23:54 **** Incremental Build of configuration Debug for project Parcial 2 V2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ControllerArcade.o" "..\\src\\ControllerArcade.c" 
+gcc -o "Parcial 2 V2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\ControllerArcade.o" "src\\ControllerJuego.o" "src\\ControllerSalon.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2 V2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 

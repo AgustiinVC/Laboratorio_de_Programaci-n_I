@@ -7,7 +7,8 @@
  Description : Parcial 2 - ¡Estamos en el año 1990!
  ============================================================================
  */
-
+/*linkedlist filter
+ * */
 #include "Controller.h"
 #include "ControllerSalon.h"
 #include "ControllerArcade.h"

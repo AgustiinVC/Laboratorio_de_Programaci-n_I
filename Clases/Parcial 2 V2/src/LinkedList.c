@@ -572,4 +572,34 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
     }
     return returnAux;
 }
+/// @fn LinkedList ll_filter*(LinkedList*, int(*)(void*))
+/// @param this la lista original
+/// @param pFunc funcion de filtro
+/// @return una lista nueva filtrada
+LinkedList* ll_filter (LinkedList* this, int (*pFunc)(void*))
+{
+	int i;
+	int lenlist;
+	void* pAuxElement;
+	LinkedList* newFilterList;
 
+	if (this != NULL && pFunc != NULL)
+	{
+		lenlist = ll_len(this);
+		newFilterList = ll_newLinkedList();
+
+		if (lenlist > 0 && newFilterList != NULL)
+		{
+			for (i = 0; i < lenlist; i++)
+			{
+				pAuxElement = ll_get(this, i);
+
+				if (pFunc(pAuxElement) == 0)
+				{
+					ll_add(newFilterList, pAuxElement);
+				}
+			}
+		}
+	}
+	return newFilterList;
+}

@@ -297,7 +297,11 @@ int controllerArcade_removeArcade (LinkedList* pArrayListSalon, LinkedList* pArr
 	int rtn = -1;
 	int auxId;
 	int busquedaId;
+	int auxCantArcade;
+	int auxIdSalon;
+	int indiceSalon;
 	Arcade* pAuxArcade;
+	Salon* pAuxSalon;
 
 	if (pArrayListArcade != NULL && ll_len(pArrayListArcade) > 0)
 	{
@@ -309,12 +313,19 @@ int controllerArcade_removeArcade (LinkedList* pArrayListSalon, LinkedList* pArr
 		}while (busquedaId == -1);
 
 		pAuxArcade = ll_get(pArrayListArcade, busquedaId);
+		Arcade_getFK_IdSalon(pAuxArcade, &auxIdSalon);
+		indiceSalon = controllerSalon_getIndexSalonById(pArrayListSalon, auxIdSalon);
+		pAuxSalon = ll_get(pArrayListSalon, indiceSalon);
+		Salon_getCantidadArcades(pAuxSalon, &auxCantArcade);
+		auxCantArcade--;
+		Salon_setCantidadArcades(pAuxSalon, auxCantArcade);
+
 		puts("\n\t\t\t\t\t\t\t\t> ARCADE\n"
 					"--------------------------------------------------------------------------------------"
 					"-------------------------------------------------------------------------------");
-		printf("%-6s %-50s %-12s %-12s %-12s %-10s %-10s\n", "ID", "NACIONALIDAD", "TIPO SONIDO", "CANT JUG", "CANT FICHAS", "ID SALON", "ID JUEGO");
+		printf("%-6s %-50s %-12s %-9s %-12s\n", "ID", "NACIONALIDAD", "TIPO SONIDO", "CANT JUG", "CANT FICHAS");
 		Arcade_print(pAuxArcade);
-		if (validacionDosCaracteres ("¿Seguro quiere eliminar el Arcade? (S/N): ", 'S', 'N') == 1)
+		if (validacionDosCaracteres ("\n¿Seguro quiere eliminar el Arcade? (S/N): ", 'S', 'N') == 1)
 		{
 			ll_remove(pArrayListArcade, busquedaId);
 			rtn = 0;

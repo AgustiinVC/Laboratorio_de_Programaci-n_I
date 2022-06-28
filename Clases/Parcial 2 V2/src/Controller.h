@@ -33,5 +33,6 @@ int controller_informeD(LinkedList* pArrayListSalon, LinkedList* pArrayListArcad
 int controller_informeE(LinkedList* pArrayListSalon, LinkedList* pArrayListArcade, LinkedList* pArrayListJuego);
 int controller_informeF(LinkedList* pArrayListSalon, LinkedList* pArrayListArcade, LinkedList* pArrayListJuego);
 int controller_informeG(LinkedList* pArrayListArcade, LinkedList* pArrayListJuego);
+int controller_informeH(LinkedList* pArrayListSalon);
 
 #endif /* CONTROLLER_H_ */

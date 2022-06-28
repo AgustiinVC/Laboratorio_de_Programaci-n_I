@@ -55,13 +55,8 @@ int Salon_setCantidadArcades(Salon* this,int cantidadArcades);
 int Salon_getCantidadArcades(Salon* this,int* cantidadArcades);
 
 int Salon_print (Salon* this);
-/*
-int passenger_orderByID (void* thisOne, void* thisTwo);
-int passenger_orderByName (void* thisOne, void* thisTwo);
-int passenger_orderByLastName (void* thisOne, void* thisTwo);
-int passenger_orderByPrice (void* thisOne, void* thisTwo);
-int passenger_orderByFlightCode (void* thisOne, void* thisTwo);
-int passenger_orderByTypePassenger (void* thisOne, void* thisTwo);
-int passenger_orderByStatusFlight (void* thisOne, void* thisTwo);
-*/
+
+int Salon_filterLocal (void* this);
+int Salon_filterShopping (void* this);
+
 #endif /* SALONES_H_ */

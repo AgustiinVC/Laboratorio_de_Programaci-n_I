@@ -1094,6 +1094,7 @@ void menuInformes (void)
 	puts ("E. Listar todos los arcades de un salon determinado ingresando su ID. Informar nombre y tipo de salon, listar todos los arcade con sus datos junto con el nombre del juego que lo compone.");
 	puts ("F. Imprimir el salon con mas cantidad de arcade, indicando todos los datos del salon y la cantidad de arcade que posee. Ordenado de manera ascendente.");
 	puts ("G. Listar los arcades que cumplan con sonido MONO y el genero de su juego sea PLATAFORMA, informando nombre de juego, genero y cantidad de jugadores que soporta el arcade. El listado debera estar ordenado por nombre de juego.");
-	puts ("10. Salir");
+	puts ("H. Filtro lista de Salon segun el tipo.");
+	puts ("I. Salir");
 	puts ("~~~~~~~~~~~~~~~~~~~~~~~~~");
 }

@@ -320,179 +320,22 @@ int Salon_print (Salon* this)
 	return rtn;
 }
 
-/*
-/// @fn int passenger_orderByID(void*, void*)
-/// @brief  orden segun el ID
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByID (void* thisOne, void* thisTwo)
+int Salon_filterLocal (void* this)
 {
-	int rtn;
-	if ( ((Passenger*)thisOne) -> id > ((Passenger*)thisTwo) -> id )
-	{
-		rtn = 1;
-	}
-	else if ( ((Passenger*)thisOne) -> id < ((Passenger*)thisTwo) -> id )
-	{
-		rtn = -1;
-	}
-	else
+	int rtn = -1;
+	if ( ((Salon*)this) -> tipoSalon == LOCAL)
 	{
 		rtn = 0;
 	}
 	return rtn;
 }
 
-/// @fn int passenger_orderByName(void*, void*)
-/// @brief  orden segun el nombre
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByName (void* thisOne, void* thisTwo)
+int Salon_filterShopping (void* this)
 {
-	int rtn;
-	int resultado;
-	resultado = compararCadenas(((Passenger*)thisOne) -> nombre, ((Passenger*)thisTwo) -> nombre, NOMBRE_LEN);
-	switch (resultado)
-	{
-		case 1:
-			rtn = 1;
-			break;
-		case 2:
-			rtn = -1;
-			break;
-		case 0:
-			rtn = 0;
-			break;
-	}
-	return rtn;
-}
-
-/// @fn int passenger_orderByLastName(void*, void*)
-/// @brief  orden segun el apellido
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByLastName (void* thisOne, void* thisTwo)
-{
-	int rtn;
-	int resultado;
-	resultado = compararCadenas(((Passenger*)thisOne) -> apellido, ((Passenger*)thisTwo) -> apellido, APELLIDO_LEN);
-	switch (resultado)
-	{
-		case 1:
-			rtn = 1;
-			break;
-		case 2:
-			rtn = -1;
-			break;
-		case 0:
-			rtn = 0;
-			break;
-	}
-	return rtn;
-}
-
-/// @fn int passenger_orderByPrice(void*, void*)
-/// @brief  orden segun el precio
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByPrice (void* thisOne, void* thisTwo)
-{
-	int rtn;
-	if ( ((Passenger*)thisOne) -> precio > ((Passenger*)thisTwo) -> precio )
-	{
-		rtn = 1;
-	}
-	else if ( ((Passenger*)thisOne) -> precio < ((Passenger*)thisTwo) -> precio )
-	{
-		rtn = -1;
-	}
-	else
+	int rtn = -1;
+	if ( ((Salon*)this) -> tipoSalon == SHOPPING)
 	{
 		rtn = 0;
 	}
 	return rtn;
 }
-
-/// @fn int passenger_orderByFlightCode(void*, void*)
-/// @brief  orden segun el codigo del vuelo
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByFlightCode (void* thisOne, void* thisTwo)
-{
-	int rtn;
-	int resultado;
-	resultado = compararCadenas(((Passenger*)thisOne) -> codigoVuelo, ((Passenger*)thisTwo) -> codigoVuelo, APELLIDO_LEN);
-	switch (resultado)
-	{
-		case 1:
-			rtn = 1;
-			break;
-		case 2:
-			rtn = -1;
-			break;
-		case 0:
-			rtn = 0;
-			break;
-	}
-	return rtn;
-}
-
-/// @fn int passenger_orderByTypePassenger(void*, void*)
-/// @brief  orden segun el tipo de pasajero
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByTypePassenger (void* thisOne, void* thisTwo)
-{
-	int rtn;
-	if ( ((Passenger*)thisOne) -> tipoPasajero > ((Passenger*)thisTwo) -> tipoPasajero )
-	{
-		rtn = 1;
-	}
-	else if ( ((Passenger*)thisOne) -> tipoPasajero < ((Passenger*)thisTwo) -> tipoPasajero )
-	{
-		rtn = -1;
-	}
-	else
-	{
-		rtn = 0;
-	}
-	return rtn;
-}
-
-/// @fn int passenger_orderByStatusFlight(void*, void*)
-/// @brief  orden segun el estado del vuelo
-///
-/// @param thisOne un pasajero
-/// @param thisTwo otro pasajero
-/// @return un 1 si es mayor el primero, -1 si es mayor el segundo y un 0 si son iguales
-int passenger_orderByStatusFlight (void* thisOne, void* thisTwo)
-{
-	int rtn;
-	if ( ((Passenger*)thisOne) -> estadoVUelo > ((Passenger*)thisTwo) -> estadoVUelo )
-	{
-		rtn = 1;
-	}
-	else if ( ((Passenger*)thisOne) -> estadoVUelo < ((Passenger*)thisTwo) -> estadoVUelo )
-	{
-		rtn = -1;
-	}
-	else
-	{
-		rtn = 0;
-	}
-	return rtn;
-}
-
-*/
