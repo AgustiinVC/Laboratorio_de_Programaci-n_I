@@ -38,6 +38,13 @@ int main(void) {
 	usu_altaForzadaArray(miUsuario, CANT_USUARIOS, "usuario@gmail.com", "abc123", "Calle Falsa 123", 1969, 0);
 	usu_altaForzadaArray(miUsuario, CANT_USUARIOS, "usuario2@gmail.com", "abc123", "Calle Falsa 421", 1898, 0);
 
+	pro_altaForzadaArray(miProducto , CANT_PRODUCTOS, 1, "Celular" , 120000, 4, 4);
+	pro_altaForzadaArray(miProducto , CANT_PRODUCTOS, 2, "Lavaropas" , 230000, 1, 3);
+	pro_altaForzadaArray(miProducto , CANT_PRODUCTOS, 1, "Remera" , 600, 14, 1);
+	pro_altaForzadaArray(miProducto , CANT_PRODUCTOS, 2, "RemerA" , 1500, 3, 1);
+	pro_altaForzadaArray(miProducto , CANT_PRODUCTOS, 1, "Escoba" , 120, 45, 2);
+
+
 	do
 	{
 		menuIngreso();

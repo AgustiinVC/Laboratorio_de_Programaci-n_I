@@ -1,0 +1,29 @@
+id,nombre,empresa,tipoGenero
+1,Snow Bros,Toaplan,Plataforma
+2,Tumblepop,Data East,Plataforma
+3,Shinobi,SEGA,Plataforma
+4,Donkey Kong,Nintendo,Plataforma
+5,Disney Aladdin,Virgin Games USA,Plataforma
+6,Mario Bros,Nintendo Atari,Plataforma
+7,Tortugas Ninjas,Konami,Plataforma
+8,Ali Baba,SEGA,Laberinto
+9,Gauntlet,Atari,Laberinto
+10,PacMan,Namco,Laberinto
+11,Cavelon,Jetsoft,Laberinto
+12,The Tower of Druaga,Namco,Laberinto
+13,Hustle,Fairchild,Laberinto
+14,Raiders,UPL,Laberinto
+15,Intrepid,Nova Games,Laberinto
+16,X Men,Konami,Aventura
+17,Terminator,Midway,Aventura
+18,Metal Slug,SNK,Aventura
+19,Jurassic Park,SEGA,Aventura
+20,Capitan America,Data East,Aventura
+21,Time Crisis,Namco,Aventura
+22,Street Fighter II,Capcom,Aventura
+23,NBA Jam,Midway,Otros
+24,Daytona USA,SEGA,Otros
+25,Mortal Kombat II,Midway,Otros
+26,Virtua Racing,SEGA,Otros
+27,Dance Dance Revolution,Konami,Otros
+28,House of the Dead,SEGA,Otros
