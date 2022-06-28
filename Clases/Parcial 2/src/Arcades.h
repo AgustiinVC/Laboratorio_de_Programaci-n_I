@@ -16,6 +16,9 @@
 #define MAX_ARCADES 1000
 #define NACIONALIDAD_LEN 128
 
+#define MONO 1
+#define ESTEREO 2
+
 typedef struct
 {
 	int idArcade;

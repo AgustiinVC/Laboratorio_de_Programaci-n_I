@@ -17,6 +17,9 @@
 #define NOMBRE_LEN 50
 #define DIRECCION_LEN 128
 
+#define SHOPPING 1
+#define LOCAL 2
+
 typedef struct
 {
 	int idSalon;

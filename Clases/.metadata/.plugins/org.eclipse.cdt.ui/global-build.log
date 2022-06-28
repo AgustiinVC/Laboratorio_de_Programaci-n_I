@@ -636,3 +636,79 @@ gcc -o "Parcial 2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\Juegos.o" "src
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
 gcc -o "Parcial 2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+00:56:37 **** Incremental Build of configuration Debug for project Parcial 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o "Parcial 2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+13:34:16 **** Incremental Build of configuration Debug for project Parcial 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Juegos.o" "..\\src\\Juegos.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeF':
+..\src\Controller.c:1397:31: error: invalid initializer
+  LinkedList cloneListJuegos = ll_newLinkedList();
+                               ^~~~~~~~~~~~~~~~
+..\src\Controller.c:1436:19: error: incompatible types when assigning to type 'LinkedList {aka struct LinkedList}' from type 'LinkedList * {aka struct LinkedList *}'
+   cloneListJuegos = ll_clone(pArrayListJuego);
+                   ^
+..\src\Controller.c:1437:11: error: incompatible type for argument 1 of 'll_sort'
+   ll_sort(cloneListJuegos, Juego_orderByName, 1);
+           ^~~~~~~~~~~~~~~
+In file included from ..\src\parser.h:13:0,
+                 from ..\src\Controller.h:17,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:56:5: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'LinkedList {aka struct LinkedList}'
+ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+     ^~~~~~~
+..\src\Controller.c:1439:26: error: incompatible type for argument 1 of 'll_len'
+   lenCloneJuego = ll_len(cloneListJuegos);
+                          ^~~~~~~~~~~~~~~
+In file included from ..\src\parser.h:13:0,
+                 from ..\src\Controller.h:17,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:39:5: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'LinkedList {aka struct LinkedList}'
+ int ll_len(LinkedList* this);
+     ^~~~~~
+..\src\Controller.c:1442:23: error: incompatible type for argument 1 of 'll_get'
+    pAuxJuego = ll_get(cloneListJuegos, i);
+                       ^~~~~~~~~~~~~~~
+In file included from ..\src\parser.h:13:0,
+                 from ..\src\Controller.h:17,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:43:7: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'LinkedList {aka struct LinkedList}'
+ void* ll_get(LinkedList* this, int index);
+       ^~~~~~
+..\src\Controller.c:1390:6: warning: unused variable 'idArcade' [-Wunused-variable]
+  int idArcade;
+      ^~~~~~~~
+13:35:33 **** Incremental Build of configuration Debug for project Parcial 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcial 2.o" "..\\src\\Parcial 2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Arcades.o" "..\\src\\Arcades.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+..\src\Controller.c: In function 'controller_informeF':
+..\src\Controller.c:1465:23: warning: passing argument 1 of 'll_deleteLinkedList' from incompatible pointer type [-Wincompatible-pointer-types]
+   ll_deleteLinkedList(&cloneListJuegos);
+                       ^
+In file included from ..\src\parser.h:13:0,
+                 from ..\src\Controller.h:17,
+                 from ..\src\Controller.c:8:
+..\src\LinkedList.h:47:5: note: expected 'LinkedList * {aka struct LinkedList *}' but argument is of type 'LinkedList ** {aka struct LinkedList **}'
+ int ll_deleteLinkedList(LinkedList* this);
+     ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Salones.o" "..\\src\\Salones.c" 
+gcc -o "Parcial 2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+13:35:44 **** Incremental Build of configuration Debug for project Parcial 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o "Parcial 2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2
+13:36:58 **** Incremental Build of configuration Debug for project Parcial 2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o "Parcial 2.exe" "src\\Arcades.o" "src\\Controller.o" "src\\Juegos.o" "src\\LinkedList.o" "src\\Parcial 2.o" "src\\Salones.o" "src\\parser.o" "src\\validaciones.o" 
+Info: Nothing to build for Parcial 2
+Info: Nothing to build for Parcial 2
+Info: Nothing to build for Parcial 2
+Info: Nothing to build for Parcial 2

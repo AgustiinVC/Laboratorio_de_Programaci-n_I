@@ -1385,8 +1385,15 @@ int controller_informeF(LinkedList* pArrayListSalon, LinkedList* pArrayListArcad
 	int maxArcades;
 	int FK_idSalon;
 	int idsalonMax;
+	int idJuego;
+	int FKIdJuego;
+	int lenCloneArcade;
+	int lenCloneJuego;
+	char auxNombreJuego[NOMBRE_LEN];
 	Salon* pAuxSalon;
 	Arcade* pAuxArcade;
+	Juego* pAuxJuego;
+	LinkedList* cloneListJuegos = ll_newLinkedList();
 	LinkedList* cloneList = ll_newLinkedList();
 
 	if (pArrayListSalon != NULL && pArrayListArcade != NULL && pArrayListJuego != NULL && lenListSalon > 0)
@@ -1415,7 +1422,7 @@ int controller_informeF(LinkedList* pArrayListSalon, LinkedList* pArrayListArcad
 		puts("\n\t\t\t\t\t\t> ARCADES\n"
 				"-------------------------------------------------------------"
 				"-------------------------------------------------------------");
-		printf("%-6s %-50s %-12s %-9s %-12s || ", "ID", "NACIONALIDAD", "TIPO SONIDO", "CANT JUG", "CANT FICHAS");
+		printf("%-6s %-50s %-12s %-9s %-12s || %-50s", "ID", "NACIONALIDAD", "TIPO SONIDO", "CANT JUG", "CANT FICHAS", "NOMBRE JUEGO");
 		for (i = 0; i < lenListArcade; i++)
 		{
 			pAuxArcade = ll_get(pArrayListArcade, i);
@@ -1425,16 +1432,38 @@ int controller_informeF(LinkedList* pArrayListSalon, LinkedList* pArrayListArcad
 				ll_add(cloneList, pAuxArcade);
 			}
 		}
-		ll_sort(cloneList, Arcade_orderByID, 1);
+		cloneListJuegos = ll_clone(pArrayListJuego);
+		ll_sort(cloneListJuegos, Juego_orderByName, 1);
+		lenCloneArcade = ll_len(cloneList);
+		lenCloneJuego = ll_len(cloneListJuegos);
+		for (i = 0; i < lenCloneJuego; i++)
+		{
+			pAuxJuego = ll_get(cloneListJuegos, i);
+			Juego_getId(pAuxJuego, &idJuego);
+			for (int j = 0; j < lenCloneArcade; j++)
+			{
+				pAuxArcade = ll_get(cloneList, j);
+				Arcade_getFK_IdJuego(pAuxArcade, &FKIdJuego);
+				if (FKIdJuego == idJuego)
+				{
+					puts("");
+					Arcade_print(pAuxArcade);
+					Juego_getNombre(pAuxJuego, auxNombreJuego);
+					printf ("%-50s", auxNombreJuego);
+				}
+			}
+		}
+		/*ll_sort(cloneList, Arcade_orderByID, 1);
 		for (i = 0; i < ll_len(cloneList); i++)
 		{
 			printf("\n");
 			pAuxArcade = ll_get(cloneList, i);
 			Arcade_print(pAuxArcade);
 
-		}
+		}*/
 		puts("");
 		ll_deleteLinkedList(cloneList);
+		ll_deleteLinkedList(cloneListJuegos);
 		rtn = 0;
 
 	}
@@ -1480,7 +1509,7 @@ int controller_informeG(LinkedList* pArrayListArcade, LinkedList* pArrayListJueg
 				Arcade_getTipoSonido(pAuxArcade, &tipoSonido);
 				Juego_getTipoGenero(pAuxJuego, &generoJuego);
 
-				if (pAuxArcade != NULL && pAuxJuego != NULL && tipoSonido == 1 && generoJuego == 1)
+				if (pAuxArcade != NULL && pAuxJuego != NULL && tipoSonido == MONO && generoJuego == PLATAFORMA)
 				{
 					ll_add(cloneListArcade, pAuxArcade);
 				}

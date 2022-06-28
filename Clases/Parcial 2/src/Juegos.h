@@ -17,6 +17,11 @@
 #define NOMBRE_LEN 50
 #define EMPRESA_LEN 50
 
+#define PLATAFORMA 1
+#define LABERINTO 2
+#define AVENTURA 3
+#define OTROS 4
+
 typedef struct
 {
 	int idJuego;
