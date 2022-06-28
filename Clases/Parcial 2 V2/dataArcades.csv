@@ -1,0 +1,18 @@
+id,nacionalidad,tipoSonido,cantJugadores,cantFichas,idSalon,idJuego
+1,Argentina,MONO,4,12,1,7
+2,Japones,MONO,5,12,3,6
+3,Coreano,ESTEREO,6,23,3,20
+4,Ingles,ESTEREO,2,5,3,1
+5,Estados Unidos,MONO,1,10,3,21
+6,Peru,ESTEREO,3,20,3,5
+7,Frances,ESTEREO,1,2,1,19
+8,Frances,MONO,2,3,3,8
+9,Argentino,ESTEREO,5,3,3,11
+10,Ingles,ESTEREO,3,2,3,14
+11,Sueco,MONO,4,5,3,3
+12,Frances,ESTEREO,4,2,3,22
+13,Frances,ESTEREO,2,4,3,20
+14,Frances,ESTEREO,2,5,3,18
+15,Argentino,MONO,4,15,3,20
+16,chequeo borrar,ESTEREO,1,2,6,15
+17,chequeo II borrar,MONO,3,2,6,16
