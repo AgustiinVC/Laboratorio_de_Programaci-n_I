@@ -1409,6 +1409,9 @@ int controller_informeF(LinkedList* pArrayListSalon, LinkedList* pArrayListArcad
 		Salon_getId(pAuxSalon, &idsalonMax);
 		Salon_print(pAuxSalon);
 		puts ("");
+		printf ("-------------------------------------------"
+				"Este salon posee %d ARCADES"
+				"----------------------------------------------------", pAuxSalon->cantidadArcades);
 		puts("\n\t\t\t\t\t\t> ARCADES\n"
 				"-------------------------------------------------------------"
 				"-------------------------------------------------------------");
